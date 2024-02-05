@@ -2,7 +2,7 @@ const {Schema , model}=require("mongoose");
 const {ObjectId}=Schema.Types;
 const blogsSchema=new Schema({
     title:{type :String ,required : true},
-    author:{type:ObjectId,required:true},
+    author:{type:ObjectId, ref:"users",required:true},
     content:{type:String,required:true},
     pages:{type:Number},
     creadedAt:{type:Date,default:Date.now()},
