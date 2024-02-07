@@ -6,7 +6,6 @@ const schema=Joi.object({
     phoneNo:Joi.number().required(),
  
 })
-
 const validate=(req,res,next)=>{
     const {error}=schema.validate(req.body);
     if(error){
